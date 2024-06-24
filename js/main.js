@@ -54,3 +54,22 @@ const kittenThree =
 
 
 kittens.innerHTML =  kittenOne + kittenTwo + kittenThree; 
+
+const buttonAdd = document.querySelector(".button-js");
+const formSection = document.querySelector('.js-new-form');
+const cancel= document.querySelector(".button-cancel");
+
+formSection.classList.remove('collapsed');
+
+buttonAdd.addEventListener("click",()=>{
+  console.log ("probando");
+formSection.classList.toggle("collapsed");
+}
+)
+cancel.addEventListener("click", ()=>{
+formSection.classList.add("collapsed");
+
+}
+)
+
+
