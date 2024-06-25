@@ -77,15 +77,9 @@ formSection.classList.add("collapsed");
 
 const inputSearch= document.querySelector('.js_in_search_desc');
 const searchButton = document.querySelector (".js-button");
-const desc1 = `Porte elegante, su patrón de color tan característico y sus ojos
-de un azul intenso, pero su historia se remonta a Asía al menos
-hace 500 años, donde tuvo su origen muy posiblemente.`;
-const desc2 = `  Produce fascinación y curiosidad. Exótico, raro, bello, extraño…
-hasta con pinta de alienígena han llegado a definir a esta raza
-gatuna que se caracteriza por la «ausencia» de pelo.`;
-const desc3 = `  Tienen la cabeza cuadrada y los ojos simétricos, por lo que su
-bella mirada se ha convertido en una de sus señas de identidad.
-Sus ojos son grandes y las orejas resultan largas y en punta.`;
+const desc1 = "elegante";
+const desc2 = "exótico";
+const desc3 = "simétricos";
 
 
 
