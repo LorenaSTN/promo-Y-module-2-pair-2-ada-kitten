@@ -42,6 +42,7 @@ const kittenTwo =
 <p class="card_description">${Kitten2Desc}
 </p>
 </li>`;
+
 const Kitten3Name = "Cielo";
 const Kitten3Upper = Kitten3Name.toUpperCase();
 const Kitten3Img = "https://dev.adalab.es/maine-coon-cat.webp";
@@ -65,21 +66,28 @@ ${Kitten3Desc}
 
 kittens.innerHTML =  kittenOne + kittenTwo + kittenThree;
 
+
+//formulario
+
+
 const buttonAdd = document.querySelector(".button-js");
-const formSection = document.querySelector('.js-new-form');
-const cancel= document.querySelector(".button-cancel");
+const formSection = document.querySelector(".js-new-form");
+const cancel = document.querySelector(".button-cancel");
 
-formSection.classList.remove('collapsed');
 
-buttonAdd.addEventListener("click",()=>{
-formSection.classList.toggle("collapsed");
+
+function toggleForm (){
+  formSection.classList.toggle("collapsed");
 }
-)
-cancel.addEventListener("click", ()=>{
-formSection.classList.add("collapsed");
 
+buttonAdd.addEventListener("click", toggleForm); 
+
+function hideForm (){
+  formSection.classList.add("collapsed");
 }
-);
+
+cancel.addEventListener("click", hideForm);
+
 
 //Ejercicio 3:
 
