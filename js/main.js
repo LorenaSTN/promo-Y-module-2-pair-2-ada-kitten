@@ -94,49 +94,65 @@ cancel.addEventListener("click", hideForm);
 //
 
 const inputSearch= document.querySelector('.js_in_search_desc');
+const descrSearchText = inputSearch.value;
 const searchButton = document.querySelector (".js-button");
-const desc1 = "elegante";
-const desc2 = "exótico";
-const desc3 = "simétricos";
+const desc1 = "Porte elegante, su patrón de color tan característico y sus ojos de un azul intenso, pero su historia se remonta a Asía al menos hace 500 años, donde tuvo su origen muy posiblemente.";
+const desc2 = "Produce fascinación y curiosidad. Exótico, raro, bello, extraño hasta con pinta de alienígena han llegado a definir a esta raza gatuna que se caracteriza por la «ausencia» de pelo.";
+const desc3 =  "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta.";
 
 
 
-searchButton.addEventListener("click", (event) => {
-event.preventDefault();
- const descrSearchText = inputSearch.value;
+// searchButton.addEventListener("click", (event) => {
+// event.preventDefault();
+//  const descrSearchText = inputSearch.value;
 
- if( descrSearchText.includes(desc1) ) {
-    kittens.innerHTML = kittenOne;
-  } else if ( descrSearchText.includes(desc2) ) {
-  kittens.innerHTML = kittenTwo;
- } else if (descrSearchText.includes(desc3)) {
-  kittens.innerHTML = kittenThree;
- }
-});
-
-
+//  if( descrSearchText.includes(desc1) ) {
+//     kittens.innerHTML = kittenOne;
+//   } else if ( descrSearchText.includes(desc2) ) {
+//   kittens.innerHTML = kittenTwo;
+//  } else if (descrSearchText.includes(desc3)) {
+//   kittens.innerHTML = kittenThree;
+//  }
+// });
 
 
-const searchRaza = document.querySelector(".search-raza")
-const race = document.querySelector (".card-race")
-const raza1 = "siames";
-const raza2 = "sphynx";
-const raza3 = "";
-
-
-searchButton.addEventListener("click", (event) => {
+const filterkitten = (event) => {
   event.preventDefault();
 
-  const inputRaza = searchRaza.value;
+  const descrSearchText = inputSearch.value;
 
-  const race = "";
-
-  if (inputRaza = raza1) {
-    
+  if (desc1.includes(descrSearchText)) {
+    kittens.innerHTML = kittenOne;
+  } else if (desc2.includes(descrSearchText)) {
+    kittens.innerHTML = kittenTwo;
+  } else if (desc3.includes(descrSearchText)) {
+    kittens.innerHTML = kittenThree;
   }
+};
 
-  message.innerHTML = race;
-})
+searchButton.addEventListener("click",filterkitten);
+
+// const searchRaza = document.querySelector(".search-raza")
+// const race = document.querySelector (".card-race")
+// const raza1 = "siames";
+// const raza2 = "sphynx";
+// const raza3 = "";
+
+
+// searchButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+
+//   const inputRaza = searchRaza.value;
+
+//   const race = "";
+
+//   if (inputRaza = raza1) {
+    
+//   }
+
+//   message.innerHTML = race;
+// })
 /*const siames = kittenOne;
 const sphynx = kittenTwo;
 const kittenThree = ""*/
+
