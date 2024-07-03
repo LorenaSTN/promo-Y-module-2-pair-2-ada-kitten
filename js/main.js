@@ -1,6 +1,6 @@
 'use strict';
 
-const kittens = document.querySelector (".js-list");
+const kittenList = document.querySelector (".js-list");
 
 const  kittenDataList = [
  {
@@ -25,29 +25,49 @@ const  kittenDataList = [
 },
 ];
  
-function renderskitten(objectKittens){
-  const item = `<li class="card kittenOne">
+
+///
+
+
+function renderKitten(kitten) {
+  kittenList.innerHTML += 
+  `<li class="card kittenOne">
 <article>
   <img
     class="card_img"
-    src="${ objectKittens.image}"
+    src="${kitten.image}"
     alt="siames-cat"
   />
-  <h3 class="card_title">${objectKittens.name}</h3>
-  <h4 class="card_race">${objectKittens.race}</h4>
-  <p class="card_description"> ${objectKittens.desc}
+  <h3 class="card_title">${kitten.name}</h3>
+  <h4 class="card_race">${kitten.race}</h4>
+  <p class="card_description"> ${kitten.desc}
   </p>
 </article>
 </li>`;
+}
 
-return item;
+
+
+function renderKittens(){
+for (const kitten of kittenDataList){
+renderKitten(kitten);
+  }
 };
 
-function showKittens(){
-  kittens.innerHTML = renderskitten(kittenDataList[0]) + renderskitten(kittenDataList[1]) + renderskitten(kittenDataList[2]);
-};
+renderKittens();
 
-showKittens();
+
+
+
+// function showKittens(){
+//   kittenList.innerHTML = renderskitten(kittenDataList[0]) + renderskitten(kittenDataList[1]) + renderskitten(kittenDataList[2]);
+// };
+
+// showKittens();
+
+
+
+//----
 
 
 const buttonAdd = document.querySelector(".button-js");
@@ -75,18 +95,31 @@ const descrSearchText = inputSearch.value;
 const searchButton = document.querySelector (".js-button");
 
 
-const filterkitten = (event) => {
+function filterKitten (event) {
   event.preventDefault();
-
-  const descrSearchText = inputSearch.value;
-
-  if (kittenDataList[0].desc.includes(descrSearchText)) {
-    kittens.innerHTML = renderskitten(kittenDataList[0]);
-  } else if (kittenDataList[1].desc.includes(descrSearchText)) {
-    kittens.innerHTML = renderskitten(kittenDataList[1]);
-  } else if (kittenDataList[2].desc.includes(descrSearchText)) {
-    kittens.innerHTML = renderskitten(kittenDataList[2]);
+  // debugger;
+  // const descrSearchText = inputSearch.value;
+  kittenList.innerHTML = '';
+  for (const kittenItem of kittenDataList) {
+    kittenItem.desc.includes(descrSearchText)
+    renderKitten(kittenItem);
   }
 };
+ 
+searchButton.addEventListener("click", filterKitten);
 
-searchButton.addEventListener("click",filterkitten);
+// const filterkitten = (event) => {
+//   event.preventDefault();
+
+//   const descrSearchText = inputSearch.value;
+
+//   if (kittenDataList[0].desc.includes(descrSearchText)) {
+//     kittenList.innerHTML = renderskitten(kittenDataList[0]);
+//   } else if (kittenDataList[1].desc.includes(descrSearchText)) {
+//     kittenList.innerHTML = renderskitten(kittenDataList[1]);
+//   } else if (kittenDataList[2].desc.includes(descrSearchText)) {
+//     kittenList.innerHTML = renderskitten(kittenDataList[2]);
+//   }
+// };
+
+
