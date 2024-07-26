@@ -45,11 +45,11 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 #### 2.2 Intro a la programación 2:
 
 - [x] 1. **LISTADO:** Mejora como se guarda la información
-- [ ] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
+- [x] 2. **LISTADO - Bonus:** Nombre de gatitos en mayúsculas
 
 #### 2.3 Condicionales:
 
-- [ ] 1. **FILTRAR:** Búsqueda por descripción.
+- [x] 1. **FILTRAR:** Búsqueda por descripción.
 - [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 
 #### 2.4 Eventos:
@@ -59,20 +59,20 @@ La solución del ejercicio completo se subirá al final del módulo, si en una s
 
 #### 2.5 Funciones I:
 
-- [ ] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
+- [x] 1. **FORMULARIO:** Mostrar/ocultar el formulario.
 - [ ] 2. **FORMULARIO:** Adicionar nuevo gatito.
 - [ ] 3. **LISTADO:** Crear el gatito en HTML
 
 #### 2.6 Funciones II:
 
-- [ ] 1. **FILTRAR:** Filtrar por descripción.
+- [x] 1. **FILTRAR:** Filtrar por descripción.
 - [ ] 2. **LISTADO - Bonus:**: ¿Y si no hay raza?.
 - [ ] 3. **BONUS:** Funciones dentro de funciones.
 - [ ] 4. **FORMULARIO - Bonus::** Cancelar formulario.
 
 #### 2.7 Objetos
 
-- [ ] 1. **LISTADO:** Convertir cada gatito en un objeto
+- [x] 1. **LISTADO:** Convertir cada gatito en un objeto
 
 #### 2.8 Arrays
 

@@ -25,8 +25,6 @@ const kittenDataList = [
   },
 ];
 
-///
-
 function renderKitten(kitten) {
   kittenList.innerHTML += `<li class="card kittenOne">
 <article>
@@ -71,13 +69,19 @@ cancel.addEventListener("click", hideForm);
 
 const inputSearch = document.querySelector(".js_in_search_desc");
 const searchButton = document.querySelector(".js-button");
+const inputRace = document.querySelector(".js-search-race");
 
 function filterKitten(event) {
   event.preventDefault();
   const descrSearchText = inputSearch.value.toLowerCase();
+  const raceSearchText = inputRace.value.toLowerCase();
   kittenList.innerHTML = "";
+
   for (const kittenItem of kittenDataList) {
-    if (kittenItem.desc.toLowerCase().includes(descrSearchText)) {
+    if (
+      kittenItem.desc.toLowerCase().includes(descrSearchText) &&
+      kittenItem.race.toLowerCase().includes(raceSearchText)
+    ) {
       renderKitten(kittenItem);
     }
   }
